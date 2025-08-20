@@ -1,16 +1,29 @@
-import type { Config } from "tailwindcss";
+import type { Config } from 'tailwindcss';
 
 const config: Config = {
   content: [
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    './pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './components/**/*.{js,ts,jsx,tsx,mdx}',
+    './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
     extend: {
+      // fontFamily: {
+      //   sans: ['var(--font-ibmplexsans)'],
+      //   inter: ['var(--font-inter)'],
+      // },
+      backgroundImage: {
+        gradient: "url('/static/background.png')",
+      },
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        purple: {
+          951: 'rgba(79, 70, 229, 1)',
+        },
+        gray: {
+          950: 'hsla(0, 0%, 100%, 0.7);',
+          951: 'hsla(0, 0%, 100%, 0.4);',
+          952: '#373b64',
+        },
       },
     },
   },
